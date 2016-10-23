@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' *; img-src * data:">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="css/sweetalert.css" media="screen" title="no title">
+        <script src='https://api.mapbox.com/mapbox.js/v3.0.0/mapbox.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/v3.0.0/mapbox.css' rel='stylesheet' />
+        <title>Tri-Valley Buses v1.0</title>
+    </head>
+    <body>
+        <div id="controls">
+            <h2>Select a route: </h2>
+            <select id="route"></select>
+        </div>
+        <div id="map"><h1 style="color:darkgray;text-align:center;">Loading map...</h1></div>
+        <footer>
+            T-V Buses v1.0, (c) 2016 Liam O'Flynn. <a href="#" target="_blank">Fork me on GitHub!</a>
+        </footer>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/sweetalert.min.js" charset="utf-8"></script>
+        <script src="js/geolib.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
