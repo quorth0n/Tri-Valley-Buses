@@ -188,4 +188,4 @@ $('#route').change(function () {
     //TODO add stop times (for v2?)
 });
 
-setInterval(app.getR, 60000);
+setInterval(app.getR, 20000);

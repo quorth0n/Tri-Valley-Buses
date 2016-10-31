@@ -12,6 +12,9 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "io.github.whirish.wheels"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.github.whirish.tvbuses"
         }
     },
     "dependent_plugins": {

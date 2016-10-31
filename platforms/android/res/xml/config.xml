@@ -7,6 +7,10 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <name>Tri-Valley Buses</name>
     <description>
         Shows location of Wheels buses in the CA Tri-Valley
@@ -14,7 +18,8 @@
     <author email="lpoflynn@protonmail.ch" href="http://whirish.github.io">
         Liam O'Flynn/"whirish"
     </author>
-    <icon src="screen/icon-64.png" />
+    <icon platform="android" src="screen/icon-64.png" />
+    <splash src="screen/splash.png" />
     <content src="index.html" />
     <allow-navigation href="*" />
     <access origin="*" />
