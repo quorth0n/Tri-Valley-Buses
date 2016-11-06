@@ -455,6 +455,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "Tri-Valley Buses";
+				PROVISIONING_PROFILE = "9ed54b9e-cc65-4547-87a9-7924fee64e04";
 				PROVISIONING_PROFILE_SPECIFIER = "Tri Valley Buses Prov. Profile";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -565,6 +566,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "Tri-Valley Buses";
+				PROVISIONING_PROFILE = "9ed54b9e-cc65-4547-87a9-7924fee64e04";
 				PROVISIONING_PROFILE_SPECIFIER = "Tri Valley Buses Prov. Profile";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

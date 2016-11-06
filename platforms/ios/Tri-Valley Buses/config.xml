@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.github.whirish.tvbuses" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.github.whirish.tvbuses2" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
@@ -17,7 +17,7 @@
     <author email="lpoflynn@protonmail.ch" href="http://whirish.github.io">
         Liam O'Flynn/"whirish"
     </author>
-    <icon src="screen/icon-64.png" />
+    <icon platform="android" src="screen/icon-64.png" />
     <content src="index.html" />
     <allow-navigation href="*" />
     <access origin="*" />
@@ -27,7 +27,9 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <icon src="screen/icon-64_ios.png" />
+    <icon height="64" src="screen/icon-64_ios.png" width="64" />
+    <icon height="72" src="screen/icon-72_ios.png" width="72" />
+    <icon height="57" src="screen/icon-57_ios.png" width="57" />
     <splash height="1334" src="screen/splash.png" width="750" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />

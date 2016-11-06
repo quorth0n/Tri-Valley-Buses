@@ -49,7 +49,7 @@
       </dict>
     </dict>
     <key>CFBundleIdentifier</key>
-    <string>io.github.whirish.tvbuses</string>
+    <string>io.github.whirish.tvbuses2</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
@@ -57,7 +57,7 @@
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0.0</string>
+    <string>1.0.2</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleURLTypes</key>
@@ -65,7 +65,7 @@
       <dict/>
     </array>
     <key>CFBundleVersion</key>
-    <string>1.0.0</string>
+    <string>1.0.2</string>
     <key>LSApplicationCategoryType</key>
     <string/>
     <key>LSRequiresIPhoneOS</key>
@@ -184,5 +184,7 @@
         <string>{768, 1024}</string>
       </dict>
     </array>
+    <key>UIRequiresFullScreen</key>
+    <true/>
   </dict>
 </plist>

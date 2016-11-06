@@ -1,6 +1,7 @@
 "use strict";
 //  GLOBALS
 var loc = 0; //0: init, 1: set by location, 2: set by bus
+var hC = false; //hasChanged
 var map;
 var lIds = [];
 var sIds = [];
@@ -43,7 +44,7 @@ var app = {
                 app.getV(localStorage.id);
             } else {
                 $('#route').prepend('<option selected disabled>[tap here]</option>');
-                map.setView([37.702222, -121.935833], 12);
+                map.setView([37.702222, -121.935833], 15);
             }
         }).fail(function () {
             swal('Error', 'An An error has occured.', 'error');
@@ -95,12 +96,18 @@ var app = {
             navigator.geolocation.getCurrentPosition(function (p) {
                 console.log(points);
                 var c = geolib.findNearest({latitude: p.coords.latitude, longitude: p.coords.longitude}, points, 0);
-                map.setView([c.latitude, c.longitude], 13);
+                if (!hC) {
+                    map.setView([c.latitude, c.longitude], 15);
+                    hC = true;
+                }
             }, function (e) {
                 console.log('Error while retrieving location:');
                 console.log(e);
                 var c = geolib.findNearest({latitude: 37.702222, longitude: -121.935833}, points, 0);
-                map.setView([c.latitude, c.longitude], 13);
+                if (!hC) {
+                    map.setView([c.latitude, c.longitude], 15);
+                    hC = true;
+                }
             }, {timeout: 750});
             app.getStops(id);
         }).fail(function () {
