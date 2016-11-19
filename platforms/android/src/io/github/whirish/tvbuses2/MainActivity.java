@@ -17,7 +17,7 @@
        under the License.
  */
 
-package io.github.whirish.tvbuses;
+package io.github.whirish.tvbuses2;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

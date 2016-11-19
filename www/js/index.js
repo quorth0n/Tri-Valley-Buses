@@ -2,6 +2,7 @@
 //  GLOBALS
 var loc = 0; //0: init, 1: set by location, 2: set by bus
 var hC = false; //hasChanged
+var ad = false; //has displayed warning
 var map;
 var lIds = [];
 var sIds = [];
@@ -63,7 +64,8 @@ var app = {
                   }
               }
         }).done(function (msg) {
-            if (msg.d == null || msg.d.length == 0) {
+            if (!ad && (msg.d == null || msg.d.length == 0)) {
+                ad = true;
                 swal('Warning', 'No bus is currently running for this route. Try again later.', 'warning');
             } else {
                 for (var i = 0; i < lIds.length; i++) {
@@ -191,6 +193,7 @@ app.initialize();
 $('#route').change(function () {
     var i = $('#route option:selected').val();
     localStorage.id = i;
+    hC = false;
     app.getV(i);
     //TODO add stop times (for v2?)
 });
