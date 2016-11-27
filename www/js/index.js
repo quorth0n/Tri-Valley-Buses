@@ -3,6 +3,7 @@
 var loc = 0; //0: init, 1: set by location, 2: set by bus
 var hC = false; //hasChanged
 var ad = false; //has displayed warning
+var prev;
 var map;
 var lIds = [];
 var sIds = [];
@@ -67,7 +68,10 @@ var app = {
             if (!ad && (msg.d == null || msg.d.length == 0)) {
                 ad = true;
                 swal('Warning', 'No bus is currently running for this route. Try again later.', 'warning');
+                $('#route').val(prev);
+                localStorage.id = prev;
             } else {
+                prev = $('#route').val();
                 for (var i = 0; i < lIds.length; i++) {
                     map.removeLayer(lIds[i]);
                 }
@@ -194,8 +198,13 @@ $('#route').change(function () {
     var i = $('#route option:selected').val();
     localStorage.id = i;
     hC = false;
+    ad = false;
     app.getV(i);
     //TODO add stop times (for v2?)
+});
+
+$('#route').focus(function () {
+    prev = this.value;
 });
 
 setInterval(app.getR, 20000);
